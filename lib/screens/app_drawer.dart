@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppDrawer extends StatefulWidget {
-  AppDrawer({Key? key, this.name, this.email, this.pfp}) : super(key: key);
+  const AppDrawer({Key? key, this.name, this.email, this.pfp})
+      : super(key: key);
   final String? name;
   final String? email;
   final String? pfp;
@@ -26,6 +27,13 @@ class _AppDrawerState extends State<AppDrawer> {
           ListTile(
             leading: const Icon(Icons.help),
             title: const Text("About"),
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text("Not Implemented"), // TODO
+                ),
+              );
+            },
           ),
         ],
       ),
