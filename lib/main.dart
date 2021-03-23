@@ -22,8 +22,8 @@ class App extends StatelessWidget {
 }
 
 class Root extends StatefulWidget {
-  Root({Key key, this.title}) : super(key: key);
-  final String title;
+  Root({Key? key, this.title}) : super(key: key);
+  final String? title;
 
   @override
   _RootState createState() => _RootState();
@@ -34,7 +34,7 @@ class _RootState extends State<Root> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text(widget.title!),
         ),
         body: Center(
           child: Column(
